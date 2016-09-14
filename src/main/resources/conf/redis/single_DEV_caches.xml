@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+	<cache-server name="serverName">
+		<!-- poolConfig不配置，将使用默认值配置 -->
+		<poolConfig>
+			<!-- 连接池的最大连接数 -->
+			<maxActive>51</maxActive>
+			<!-- 最大空闲连接中的数量 -->
+			<maxIdle>50</maxIdle>
+			<!-- 最小空闲连接中的数量 -->
+			<minIdle>5</minIdle>
+			<!-- 最大超时时间，以毫秒计 -->
+			<maxWait>2000</maxWait>
+			<testOnBorrow>true</testOnBorrow>
+		</poolConfig>
+		<!-- 比须配置 -->
+		<shardConfig>
+				<shard name="shard1">
+				<server>
+					<ip>10.19.220.103</ip>
+					<port>6379</port>
+					<dbIndex>0</dbIndex>
+				</server>
+			</shard>
+		</shardConfig>
+	</cache-server>
